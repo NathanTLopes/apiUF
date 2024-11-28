@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/ufs', (req, res) => {
     const nomeUf = req.query.busca;
-    const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : buscarUfs();
+    const resultado = nomeUf ? buscarUfsPorNome(nomeUf) : buscaUfs();
     if (resultado.length > 0) {
         res.json(resultado);
     } else {
